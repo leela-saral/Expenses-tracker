@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pennywise | Expense Tracker</title><link rel="stylesheet" href="style.css"></head>
+<body><main class="app">
+<header><div class="logo">₹</div><p class="eyebrow">YOUR MONEY, MADE CLEAR</p><h1>Pennywise</h1><p class="sub">A little clarity for your everyday spending.</p></header>
+<section class="summary">
+<article class="balance"><p>Available balance</p><h2 id="balance">₹0.00</h2><small>Income minus expenses</small></article>
+<article><p>Total income</p><h2 id="income">₹0.00</h2><small class="green">Money in</small></article>
+<article><p>Total expenses</p><h2 id="expenses">₹0.00</h2><small class="red">Money out</small></article>
+</section>
+<section class="columns">
+<section class="panel"><p class="eyebrow">NEW TRANSACTION</p><h2>Add a record</h2>
+<form id="form">
+<label for="description">Description</label><input id="description" maxlength="70" placeholder="e.g. Lunch with friends" required>
+<div class="two"><div><label for="amount">Amount (₹)</label><input id="amount" type="number" min=".01" step=".01" placeholder="250" required></div>
+<div><label for="type">Type</label><select id="type"><option value="expense">Expense</option><option value="income">Income</option></select></div></div>
+<label for="category">Category</label><select id="category"><option>Food</option><option>Transport</option><option>Education</option><option>Shopping</option><option>Bills</option><option>Salary</option><option>Allowance</option><option>Other</option></select>
+<label for="date">Date</label><input id="date" type="date" required>
+<button class="primary" type="submit">Add transaction ↗</button><p id="message" role="status"></p>
+</form></section>
+<section class="panel"><div class="heading"><div><p class="eyebrow">YOUR ACTIVITY</p><h2>Transactions</h2></div><span id="count">0 records</span></div>
+<label class="sr" for="filter">Filter</label><select id="filter" class="filter"><option value="all">All transactions</option><option value="income">Income only</option><option value="expense">Expenses only</option></select>
+<div id="list"></div><p id="empty" class="empty">No transactions yet. Add your first record to get started. ✨</p><button id="clear" class="clear" type="button">Clear all transactions</button>
+</section></section><footer>Made for mindful money habits ♡<p>Demo app: records stay in this browser on this device.</p></footer>
+</main><script src="script.js"></script></body></html>
